@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 21:26:40 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/12 11:47:00 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:14:32 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	print_format(char s, va_list ap)
 	else
 		return (ft_print_char(s));
 	return (n);
-	va_end(ap);
 }
 
 int	ft_printf(const char *format, ...)
@@ -60,11 +59,3 @@ int	ft_printf(const char *format, ...)
 	return (char_printed);
 }
 
-/* #include <stdio.h>
-#include <limits.h>
-#include <fcntl.h>
-int main()
-{
-	ft_printf("%+d\n", 42);
-	printf("% d\n", -42);
-} */
