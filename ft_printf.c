@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 21:26:40 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/12 18:14:32 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/01/13 13:34:22 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	char_printed = 0;
+	if (write(1, "", 0) == -1)
+		return (-1);
 	va_start(args, format);
 	while (format[i])
 	{
@@ -51,11 +53,8 @@ int	ft_printf(const char *format, ...)
 			char_printed += print_format(format[++i], args);
 		else
 			char_printed += ft_print_char(format[i]);
-		if (char_printed < 0)
-			return (-1);
 		i++;
 	}
 	va_end(args);
 	return (char_printed);
 }
-
