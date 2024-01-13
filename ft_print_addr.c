@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:55:27 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/11 13:37:21 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/01/13 13:33:32 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	ft_print_addr(void	*p)
 	symbols = "0123456789abcdef";
 	addr = (unsigned long)p;
 	count += ft_print_str("0x");
-	if (count < 0)
-		return (-1);
 	count += print_hex(addr, symbols);
 	return (count);
 }
