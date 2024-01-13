@@ -6,14 +6,14 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 17:53:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/09 13:27:48 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/01/13 13:34:35 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static int	ft_print_char(char c)
-{		
+{
 	return (write(1, &c, 1));
 }
 
