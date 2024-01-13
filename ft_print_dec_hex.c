@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 17:53:02 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/12 11:33:09 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/01/13 13:33:47 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ int	ft_print_dec_hex(long num, int base, char s)
 	if (num < 0)
 	{
 		n += ft_print_char('-');
-		if (n < 0)
-			return (-1);
 		n += ft_print_dec_hex(-num, base, s);
 	}
 	else if (num < base)
@@ -34,8 +32,6 @@ int	ft_print_dec_hex(long num, int base, char s)
 	else
 	{
 		n += ft_print_dec_hex(num / base, base, s);
-		if (n < 0)
-			return (-1);
 		n += ft_print_dec_hex(num % base, base, s);
 	}
 	return (n);
