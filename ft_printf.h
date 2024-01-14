@@ -6,7 +6,7 @@
 /*   By: abmahfou <abmahfou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 16:09:46 by abmahfou          #+#    #+#             */
-/*   Updated: 2024/01/11 12:33:45 by abmahfou         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:16:48 by abmahfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdlib.h>
 
+int	ft_printf(const char *format, ...);
 int	ft_print_dec_hex(long num, int base, char s);
 int	ft_print_str(const char *str);
 int	ft_print_addr(void	*p);
